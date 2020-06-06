@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/categories_screen.dart';
+import './screens/tabs_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,10 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Desi Meals'),
-      ),
-      body: CategoriesScreen(),
+      body: TabsScreen(),
     );
   }
 }
