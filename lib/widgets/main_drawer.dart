@@ -38,9 +38,7 @@ class MainDrawer extends StatelessWidget {
             child: Text(
               'Cooking Up!',
               style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 30,
-                  color: Theme.of(context).primaryColor),
+                  fontSize: 30, color: Theme.of(context).primaryColor),
             ),
           ),
           SizedBox(height: 10),
@@ -48,7 +46,7 @@ class MainDrawer extends StatelessWidget {
             'Meals',
             Icons.restaurant,
             () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => TabsScreen(),
@@ -61,12 +59,7 @@ class MainDrawer extends StatelessWidget {
             'Filters',
             Icons.settings,
             () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FiltersScreen(),
-                ),
-              );
+              Navigator.pushReplacementNamed(context, FiltersScreen.routeName);
             },
           )
         ],
